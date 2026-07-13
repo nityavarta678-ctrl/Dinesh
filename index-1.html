@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinesh Deshmukh's Spardha Pariksha Academy — Gadchiroli</title>
+<meta name="description" content="Dinesh Deshmukh's Spardha Pariksha Academy, Gadchiroli — Police Bharti, MPSC, Talathi, Vanrakshak, ZP Bharti परीक्षांसाठी मार्गदर्शन.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Hind:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;
+    --ink-soft:#25335a;
+    --marigold:#F5A623;
+    --marigold-deep:#D9860A;
+    --leaf:#2F6F4F;
+    --maroon:#7A2048;
+    --paper:#FBF6EA;
+    --paper-line:#e7dcc4;
+    --white:#FFFFFF;
+    --ink-70: rgba(20,33,61,.7);
+    --ink-45: rgba(20,33,61,.45);
+    --shadow: 0 18px 40px -18px rgba(20,33,61,.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Hind','Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Baloo 2','Hind',sans-serif;
+    margin:0;
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Inter',sans-serif; font-weight:700; font-size:12.5px;
+    letter-spacing:2px; text-transform:uppercase; color:var(--maroon);
+  }
+  .eyebrow::before{content:""; width:18px; height:2px; background:var(--maroon); display:inline-block;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,234,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--paper-line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 0;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{width:46px; height:46px; border-radius:50%;}
+  .brand-text{line-height:1.15;}
+  .brand-text .name-mr{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:16px; color:var(--ink);}
+  .brand-text .name-en{font-family:'Inter',sans-serif; font-size:11px; color:var(--ink-45); letter-spacing:.5px;}
+  nav.links{display:flex; gap:28px; font-weight:600; font-size:15px;}
+  nav.links a{position:relative; padding:4px 0; color:var(--ink-70);}
+  nav.links a:hover{color:var(--ink);}
+  nav.links a::after{
+    content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px;
+    background:var(--marigold-deep); transition:width .25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px; border-radius:8px; font-weight:700; font-size:14.5px;
+    border:2px solid transparent; cursor:pointer;
+  }
+  .btn-primary{background:var(--marigold); color:var(--ink); box-shadow:var(--shadow);}
+  .btn-primary:hover{background:var(--marigold-deep);}
+  .btn-outline{border-color:var(--ink); color:var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:var(--white);}
+  .btn-ghost-light{border-color:rgba(255,255,255,.5); color:var(--white);}
+  .btn-ghost-light:hover{background:rgba(255,255,255,.15);}
+  .menu-btn{display:none; background:none; border:none; font-size:26px; color:var(--ink); cursor:pointer;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative; overflow:hidden;
+    background:var(--ink);
+    color:var(--white);
+    padding:64px 0 0;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(180deg, rgba(20,33,61,.55) 0%, rgba(20,33,61,.85) 78%, var(--ink) 100%),
+      repeating-linear-gradient(0deg, transparent 0 38px, rgba(255,255,255,.05) 38px 39px);
+    z-index:1;
+  }
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center;
+    padding-bottom:70px;
+  }
+  .hero-photo-wrap{position:relative;}
+  .hero-photo{
+    border-radius:14px; overflow:hidden; box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+    border:6px solid rgba(255,255,255,.08);
+  }
+  .hero-photo img{width:100%; height:340px; object-fit:cover;}
+  .admit-tag{
+    position:absolute; bottom:-18px; left:-18px;
+    background:var(--marigold); color:var(--ink);
+    padding:10px 16px; border-radius:8px; font-weight:700; font-size:13.5px;
+    box-shadow:var(--shadow);
+    font-family:'Inter',sans-serif;
+  }
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(245,166,35,.15); border:1px solid rgba(245,166,35,.5);
+    color:var(--marigold); padding:7px 14px; border-radius:100px;
+    font-size:13px; font-weight:700; margin-bottom:18px;
+  }
+  .hero-badge .dot{width:7px; height:7px; border-radius:50%; background:var(--marigold); animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.3;}}
+  .hero h1{font-size:44px; line-height:1.22; margin-bottom:16px;}
+  .hero h1 span{color:var(--marigold);}
+  .hero p.lead{font-size:17px; color:rgba(255,255,255,.78); max-width:520px; margin-bottom:28px; line-height:1.7;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px;}
+  .hero-stats{display:flex; gap:34px; flex-wrap:wrap;}
+  .hero-stats div .num{font-family:'Baloo 2'; font-size:26px; font-weight:800; color:var(--marigold);}
+  .hero-stats div .lbl{font-size:12.5px; color:rgba(255,255,255,.65); font-weight:600;}
+
+  /* ===== Section shell ===== */
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin:0 auto 50px; text-align:center;}
+  .section-head h2{font-size:32px; margin-top:10px; line-height:1.3;}
+  .section-head p{color:var(--ink-70); margin-top:12px; font-size:16px; line-height:1.7;}
+
+  /* ===== About ===== */
+  .about{background:var(--white);}
+  .about-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; align-items:center;}
+  .about-photo{position:relative;}
+  .about-photo img{border-radius:14px; box-shadow:var(--shadow); border:4px solid var(--paper);}
+  .about-photo::after{
+    content:""; position:absolute; top:22px; left:22px; right:-22px; bottom:-22px;
+    border:2px solid var(--marigold); border-radius:14px; z-index:-1;
+  }
+  .about-copy .eyebrow{margin-bottom:14px;}
+  .about-copy h2{font-size:30px; margin-bottom:18px; line-height:1.35;}
+  .about-copy p{color:var(--ink-70); line-height:1.85; font-size:15.5px; margin-bottom:16px;}
+  .about-goals{list-style:none; padding:0; margin:24px 0 0; display:grid; gap:12px;}
+  .about-goals li{display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--ink);}
+  .about-goals li .tick{
+    flex:none; width:22px; height:22px; border-radius:50%; background:var(--leaf);
+    color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px; margin-top:1px;
+  }
+
+  /* ===== Courses (Hall Ticket cards) ===== */
+  .courses{background:var(--ink); color:var(--white); position:relative;}
+  .courses .section-head p{color:rgba(255,255,255,.65);}
+  .courses .eyebrow{color:var(--marigold);}
+  .courses .eyebrow::before{background:var(--marigold);}
+  .course-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .ticket{
+    background:var(--paper); color:var(--ink); border-radius:12px;
+    padding:22px 22px 20px; position:relative; overflow:hidden;
+    box-shadow:0 20px 40px -18px rgba(0,0,0,.5);
+    border:1px solid var(--paper-line);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .ticket:hover{transform:translateY(-6px); box-shadow:0 26px 48px -16px rgba(0,0,0,.6);}
+  .ticket::before{
+    content:""; position:absolute; left:-9px; top:50%; width:18px; height:18px;
+    background:var(--ink); border-radius:50%; transform:translateY(-50%);
+  }
+  .ticket::after{
+    content:""; position:absolute; right:-9px; top:50%; width:18px; height:18px;
+    background:var(--ink); border-radius:50%; transform:translateY(-50%);
+  }
+  .ticket .roll{
+    font-family:'Inter',sans-serif; font-size:11px; letter-spacing:1.5px; font-weight:700;
+    color:var(--maroon); text-transform:uppercase; margin-bottom:10px;
+  }
+  .ticket h3{font-size:19px; margin-bottom:8px;}
+  .ticket p{font-size:13.5px; color:var(--ink-70); line-height:1.6; margin:0 0 14px;}
+  .ticket .divider{border-top:1.5px dashed var(--paper-line); margin:14px 0;}
+  .ticket .stamp{
+    display:inline-block; font-family:'Inter',sans-serif; font-size:10.5px; font-weight:700;
+    letter-spacing:1px; color:var(--leaf); border:1.5px solid var(--leaf); border-radius:5px;
+    padding:3px 9px; transform:rotate(-3deg);
+  }
+
+  /* ===== Features ===== */
+  .features{background:var(--paper);}
+  .feature-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:18px;}
+  .feature{
+    background:var(--white); border-radius:12px; padding:26px 18px; text-align:center;
+    border:1px solid var(--paper-line); box-shadow:0 10px 24px -16px rgba(20,33,61,.2);
+  }
+  .feature .icon{
+    width:48px; height:48px; border-radius:50%; margin:0 auto 14px;
+    display:flex; align-items:center; justify-content:center; font-size:21px;
+    background:linear-gradient(135deg, var(--marigold), var(--marigold-deep)); color:var(--ink);
+  }
+  .feature h3{font-size:14.5px; margin-bottom:6px; line-height:1.4;}
+  .feature p{font-size:12px; color:var(--ink-45); line-height:1.5;}
+
+  /* ===== Gallery ===== */
+  .gallery{background:var(--white);}
+  .gallery-frame{
+    max-width:820px; margin:0 auto; border-radius:16px; overflow:hidden;
+    box-shadow:var(--shadow); position:relative; border:6px solid var(--paper);
+  }
+  .gallery-frame img{width:100%; height:auto; display:block;}
+  .gallery-frame .cap{
+    position:absolute; left:0; right:0; bottom:0; padding:16px 22px;
+    background:linear-gradient(0deg, rgba(20,33,61,.85), transparent);
+    color:#fff; font-size:13.5px; font-weight:600;
+  }
+
+  /* ===== Admission ===== */
+  .admission{background:var(--maroon); color:var(--white); position:relative; overflow:hidden;}
+  .admission::before{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 2px, transparent 2px 26px);
+  }
+  .admission-inner{position:relative; z-index:1; display:grid; grid-template-columns:.9fr 1.1fr; gap:50px; align-items:center;}
+  .admission .eyebrow{color:var(--marigold);}
+  .admission .eyebrow::before{background:var(--marigold);}
+  .admission h2{font-size:30px; margin:12px 0 16px; line-height:1.35;}
+  .admission p{color:rgba(255,255,255,.8); line-height:1.75; font-size:15px;}
+  .form-card{
+    background:var(--white); color:var(--ink); border-radius:14px; padding:30px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.5);
+  }
+  .form-card h3{font-size:18px; margin-bottom:4px;}
+  .form-card .sub{font-size:13px; color:var(--ink-45); margin-bottom:20px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-size:13px; font-weight:700; margin-bottom:6px; color:var(--ink-70);}
+  .field input, .field select{
+    width:100%; padding:12px 14px; border-radius:8px; border:1.5px solid var(--paper-line);
+    font-family:'Hind',sans-serif; font-size:14.5px; background:var(--paper); color:var(--ink);
+  }
+  .field input:focus, .field select:focus{outline:2px solid var(--marigold); outline-offset:1px; border-color:var(--marigold);}
+  .form-card .btn-primary{width:100%; justify-content:center; margin-top:6px; font-size:15px; padding:13px;}
+  .form-note{font-size:11.5px; color:var(--ink-45); margin-top:12px; text-align:center;}
+
+  /* ===== Contact ===== */
+  .contact{background:var(--paper);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch;}
+  .contact-list{display:grid; gap:16px; align-content:start;}
+  .contact-item{
+    display:flex; gap:16px; align-items:flex-start; background:var(--white);
+    padding:18px 20px; border-radius:12px; border:1px solid var(--paper-line);
+  }
+  .contact-item .icon{
+    flex:none; width:42px; height:42px; border-radius:10px; background:var(--ink);
+    color:var(--marigold); display:flex; align-items:center; justify-content:center; font-size:18px;
+  }
+  .contact-item .lbl{font-size:12px; font-weight:700; color:var(--ink-45); text-transform:uppercase; letter-spacing:.5px;}
+  .contact-item .val{font-size:15px; font-weight:600; margin-top:2px;}
+  .map-frame{border-radius:12px; overflow:hidden; border:1px solid var(--paper-line); min-height:280px;}
+  .map-frame iframe{width:100%; height:100%; min-height:280px; border:0;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--ink); color:rgba(255,255,255,.7); padding:44px 0 22px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; padding-bottom:26px; border-bottom:1px solid rgba(255,255,255,.12);}
+  .footer-brand{display:flex; align-items:center; gap:12px;}
+  .footer-brand img{width:40px; height:40px; border-radius:50%;}
+  .footer-brand .name{color:#fff; font-family:'Baloo 2'; font-weight:700; font-size:15px;}
+  .social-row{display:flex; gap:10px;}
+  .social-row a{
+    width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.08);
+    display:flex; align-items:center; justify-content:center; font-size:16px; color:#fff;
+    border:1px solid rgba(255,255,255,.14);
+  }
+  .social-row a:hover{background:var(--marigold); color:var(--ink);}
+  .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-top:20px; font-size:12.5px;}
+
+  /* ===== Floating WhatsApp ===== */
+  .float-wa{
+    position:fixed; right:22px; bottom:22px; z-index:60;
+    width:56px; height:56px; border-radius:50%; background:#25D366;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px rgba(0,0,0,.3);
+    font-size:26px; color:#fff;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 940px){
+    nav.links{display:none;}
+    .menu-btn{display:block;}
+    .hero-grid{grid-template-columns:1fr; padding-bottom:50px;}
+    .hero h1{font-size:32px;}
+    .about-grid{grid-template-columns:1fr; gap:40px;}
+    .about-photo::after{display:none;}
+    .course-grid{grid-template-columns:repeat(2,1fr);}
+    .feature-grid{grid-template-columns:repeat(2,1fr);}
+    .admission-inner{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+  @media (max-width: 560px){
+    .course-grid{grid-template-columns:1fr;}
+    .feature-grid{grid-template-columns:1fr;}
+    .hero-stats{gap:22px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="Academy Logo">
+      <div class="brand-text">
+        <div class="name-mr">दिनेश देशमुख स्पर्धा परीक्षा अकॅडमी</div>
+        <div class="name-en">GADCHIROLI, MAHARASHTRA</div>
+      </div>
+    </div>
+    <nav class="links">
+      <a href="#about">आमच्याविषयी</a>
+      <a href="#courses">कोर्सेस</a>
+      <a href="#features">वैशिष्ट्ये</a>
+      <a href="#gallery">गॅलरी</a>
+      <a href="#admission">प्रवेश</a>
+      <a href="#contact">संपर्क</a>
+    </nav>
+    <a class="btn btn-primary" href="tel:+918459785137">📞 Call Now</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
+  </div>
+  <div id="mnav" style="display:none; flex-direction:column; padding:10px 24px 18px; gap:14px; font-weight:600;">
+    <a href="#about">आमच्याविषयी</a>
+    <a href="#courses">कोर्सेस</a>
+    <a href="#features">वैशिष्ट्ये</a>
+    <a href="#gallery">गॅलरी</a>
+    <a href="#admission">प्रवेश</a>
+    <a href="#contact">संपर्क</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> प्रवेश सुरू आहे — Admission Open 2026</div>
+      <h1>स्पर्धा परीक्षेचं <span>यश</span><br>इथून सुरू होतं</h1>
+      <p class="lead">पोलीस भरती, MPSC, तलाठी, वनरक्षक आणि ZP भरती परीक्षांसाठी गडचिरोलीतील विश्वासू मार्गदर्शन — रोज सराव, सोप्या ट्रिक्स आणि वैयक्तिक लक्ष.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#admission">🎓 प्रवेश घ्या</a>
+        <a class="btn btn-ghost-light" href="https://wa.me/919511975011?text=Namaskar%2C%20mala%20academy%20baddal%20mahiti%20have%20aahe." target="_blank" rel="noopener">💬 WhatsApp करा</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="num">7+</div><div class="lbl">परीक्षा कोर्सेस</div></div>
+        <div><div class="num">100+</div><div class="lbl">विद्यार्थी</div></div>
+        <div><div class="num">Daily</div><div class="lbl">टेस्ट सिरीज</div></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <img src="images/classroom.jpg" alt="Classroom at Dinesh Deshmukh's Academy, Gadchiroli">
+      </div>
+      <div class="admit-tag">📍 Gadchiroli, Maharashtra</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="images/classroom.jpg" alt="Dinesh Deshmukh Sir with students">
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">आमच्याविषयी</span>
+      <h2>दिनेश देशमुख सर — गडचिरोलीतील स्पर्धा परीक्षा मार्गदर्शक</h2>
+      <p>Dinesh Deshmukh's Spardha Pariksha Academy ही गडचिरोली येथील स्पर्धा परीक्षांसाठी समर्पित संस्था आहे. ग्रामीण भागातील विद्यार्थ्यांना दर्जेदार, सोप्या भाषेतील आणि परवडणारे मार्गदर्शन मिळावे या उद्देशाने अकॅडमीची सुरुवात झाली.</p>
+      <p>पोलीस भरती, MPSC, तलाठी, वनरक्षक आणि ZP भरती या परीक्षांसाठी संकल्पना स्पष्ट करून, नियमित सराव आणि सरावाच्या माध्यमातून विद्यार्थ्यांना आत्मविश्वासाने परीक्षेला सामोरे जाण्यासाठी तयार केलं जातं.</p>
+      <ul class="about-goals">
+        <li><span class="tick">✓</span> ग्रामीण विद्यार्थ्यांपर्यंत दर्जेदार मार्गदर्शन पोहोचवणे</li>
+        <li><span class="tick">✓</span> संकल्पनांवर आधारित शिकवण, घोकंपट्टी नाही</li>
+        <li><span class="tick">✓</span> प्रत्येक विद्यार्थ्याच्या प्रगतीचा नियमित आढावा</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="courses" id="courses">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">कोर्सेस</span>
+      <h2>तुमच्या परीक्षेसाठी योग्य कोर्स निवडा</h2>
+      <p>प्रत्येक कोर्स अभ्यासक्रमानुसार रचलेला — पेपर पॅटर्न, सराव प्रश्न आणि टेस्ट सिरीजसह.</p>
+    </div>
+    <div class="course-grid">
+      <div class="ticket"><div class="roll">Admit Card · 01</div><h3>पोलीस भरती</h3><p>शारीरिक चाचणी मार्गदर्शन + लेखी परीक्षा तयारी.</p><div class="divider"></div><span class="stamp">ADMISSION OPEN</span></div>
+      <div class="ticket"><div class="roll">Admit Card · 02</div><h3>MPSC</h3><p>राज्यसेवा व संयुक्त परीक्षांसाठी सखोल मार्गदर्शन.</p><div class="divider"></div><span class="stamp">ADMISSION OPEN</span></div>
+      <div class="ticket"><div class="roll">Admit Card · 03</div><h3>तलाठी भरती</h3><p>महसूल विभाग परीक्षेचा संपूर्ण अभ्यासक्रम.</p><div class="divider"></div><span class="stamp">ADMISSION OPEN</span></div>
+      <div class="ticket"><div class="roll">Admit Card · 04</div><h3>वनरक्षक भरती</h3><p>वन विभाग परीक्षा व शारीरिक तयारीचे मार्गदर्शन.</p><div class="divider"></div><span class="stamp">ADMISSION OPEN</span></div>
+      <div class="ticket"><div class="roll">Admit Card · 05</div><h3>ZP भरती</h3><p>जिल्हा परिषद भरती परीक्षेसाठी सराव व मार्गदर्शन.</p><div class="divider"></div><span class="stamp">ADMISSION OPEN</span></div>
+      <div class="ticket"><div class="roll">Admit Card · 06</div><h3>Maths & Reasoning</h3><p>सर्व स्पर्धा परीक्षांसाठी गणित व बुद्धिमत्ता चाचणी.</p><div class="divider"></div><span class="stamp">ADMISSION OPEN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">वैशिष्ट्ये</span>
+      <h2>अकॅडमीत तुम्हाला काय मिळतं</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature"><div class="icon">📝</div><h3>Daily Test</h3><p>रोज सराव परीक्षा</p></div>
+      <div class="feature"><div class="icon">📄</div><h3>PDF Notes</h3><p>सोप्या भाषेतील नोट्स</p></div>
+      <div class="feature"><div class="icon">⚡</div><h3>Shortcut Tricks</h3><p>वेळ वाचवणाऱ्या पद्धती</p></div>
+      <div class="feature"><div class="icon">📚</div><h3>Previous Papers</h3><p>मागील वर्षांचे प्रश्न</p></div>
+      <div class="feature"><div class="icon">🙋</div><h3>Doubt Solving</h3><p>वैयक्तिक शंका निरसन</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">गॅलरी</span>
+      <h2>वर्गातील एक क्षण</h2>
+    </div>
+    <div class="gallery-frame">
+      <img src="images/classroom.jpg" alt="Students in classroom at the academy">
+      <div class="cap">दिनेश देशमुख सर आपल्या विद्यार्थ्यांसोबत — Gadchiroli</div>
+    </div>
+  </div>
+</section>
+
+<section class="admission" id="admission">
+  <div class="wrap admission-inner">
+    <div>
+      <span class="eyebrow">प्रवेश</span>
+      <h2>आजच तुमचा प्रवेश निश्चित करा</h2>
+      <p>फॉर्म भरा — आमची टीम लवकरच तुमच्याशी संपर्क साधेल. किंवा थेट WhatsApp / कॉलद्वारे संपर्क करा.</p>
+    </div>
+    <div class="form-card">
+      <h3>Admission Form</h3>
+      <div class="sub">सर्व माहिती अचूक भरा</div>
+      <form id="admissionForm">
+        <div class="field">
+          <label for="fname">पूर्ण नाव</label>
+          <input type="text" id="fname" placeholder="तुमचे पूर्ण नाव" required>
+        </div>
+        <div class="field">
+          <label for="fmobile">मोबाईल नंबर</label>
+          <input type="tel" id="fmobile" placeholder="10 अंकी मोबाईल नंबर" pattern="[0-9]{10}" required>
+        </div>
+        <div class="field">
+          <label for="fexam">परीक्षा निवडा</label>
+          <select id="fexam" required>
+            <option value="" disabled selected>-- परीक्षा निवडा --</option>
+            <option>पोलीस भरती</option>
+            <option>MPSC</option>
+            <option>तलाठी भरती</option>
+            <option>वनरक्षक भरती</option>
+            <option>ZP भरती</option>
+            <option>Maths & Reasoning</option>
+            <option>English Grammar</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">WhatsApp द्वारे अर्ज पाठवा</button>
+      </form>
+      <div class="form-note">Submit केल्यावर WhatsApp उघडेल — तिथे मेसेज पाठवा.</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">संपर्क</span>
+      <h2>आमच्याशी संपर्क साधा</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-list">
+        <a class="contact-item" href="tel:+918459785137">
+          <div class="icon">📞</div>
+          <div><div class="lbl">Call</div><div class="val">8459785137</div></div>
+        </a>
+        <a class="contact-item" href="https://wa.me/919511975011" target="_blank" rel="noopener">
+          <div class="icon">💬</div>
+          <div><div class="lbl">WhatsApp</div><div class="val">9511975011</div></div>
+        </a>
+        <a class="contact-item" href="mailto:dpatildeshmukh1992@gmail.com">
+          <div class="icon">✉️</div>
+          <div><div class="lbl">Email</div><div class="val">dpatildeshmukh1992@gmail.com</div></div>
+        </a>
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <div><div class="lbl">Address</div><div class="val">Gadchiroli, Maharashtra</div></div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Gadchiroli,Maharashtra&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Academy location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Academy Logo">
+        <div class="name">दिनेश देशमुख स्पर्धा परीक्षा अकॅडमी</div>
+      </div>
+      <div class="social-row">
+        <a href="https://youtube.com/@studykattawithdineshsir?si=P40rGu7VxWURyWb2" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+        <a href="https://www.facebook.com/dinesh.deshmukh.921230" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://wa.me/919511975011" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dinesh Deshmukh's Spardha Pariksha Academy, Gadchiroli. All rights reserved.</div>
+      <div>Gadchiroli, Maharashtra</div>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/919511975011" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+  document.getElementById('admissionForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fname').value.trim();
+    var mobile = document.getElementById('fmobile').value.trim();
+    var exam = document.getElementById('fexam').value;
+    var msg = "Namaskar, mala admission ghyayche aahe.%0A"
+      + "Naav: " + encodeURIComponent(name) + "%0A"
+      + "Mobile: " + encodeURIComponent(mobile) + "%0A"
+      + "Pariksha: " + encodeURIComponent(exam);
+    window.open("https://wa.me/919511975011?text=" + msg, "_blank");
+  });
+</script>
+
+</body>
+</html>
